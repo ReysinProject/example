@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {loadConfig} from "../../reysin/src/utils/config-loader";
-import {loadApps} from "../../reysin/src/utils/app-loader";
+import {loadApps} from "@reysin/project/dist/utils/app-loader";
+import {loadConfig} from "@reysin/project/dist/config/config-loader";
+const config = loadConfig();
 
 async function bootstrap() {
-	const config = loadConfig();
-	const apps = await loadApps(config.framework.apps);
+	console.log(config)
+	// const apps = await loadApps(config.framework.apps);
 
 	const App: React.FC = () => (
 		<div>
@@ -21,5 +22,4 @@ async function bootstrap() {
 	);
 }
 
-bootstrap().then(r =>
-  console.log('Application started successfully'));
+bootstrap().then(r => console.log('Application started successfully'));

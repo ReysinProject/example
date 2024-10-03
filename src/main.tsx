@@ -3,7 +3,7 @@ import {ReysinConfig, loadConfigBrowser} from "@reysin/project/dist/config/confi
 import {createRoot} from "react-dom/client";
 import App from "./App";
 
-async function bootstrap(config: ReysinConfig) {
+loadConfigBrowser().then((config: ReysinConfig) => {
 	console.log(config)
 
 	const container = document.getElementById(config.app.rootElement);
@@ -13,9 +13,5 @@ async function bootstrap(config: ReysinConfig) {
 			<App />
 		</React.StrictMode>
 	)
-}
-
-loadConfigBrowser().then((config: ReysinConfig) => {
-	return bootstrap(config);
 }).then(() => console.log('Application started successfully'))
 	.catch((error: any) => console.error('Failed to start application:', error));

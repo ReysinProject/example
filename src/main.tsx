@@ -1,25 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {loadApps} from "@reysin/project/dist/utils/app-loader";
-import {loadConfig} from "@reysin/project/dist/config/config-loader";
-const config = loadConfig();
+import {ReysinConfig, loadConfigBrowser} from "@reysin/project/dist/config/config-loader";
+import {createRoot} from "react-dom/client";
+import App from "./App";
 
-async function bootstrap() {
+async function bootstrap(config: ReysinConfig) {
 	console.log(config)
-	// const apps = await loadApps(config.framework.apps);
 
-	const App: React.FC = () => (
-		<div>
-			<p>test</p>
-		</div>
-	);
-
-	ReactDOM.render(
+	const container = document.getElementById(config.app.rootElement);
+	const root = createRoot(container!);
+	root.render(
 		<React.StrictMode>
 			<App />
-		</React.StrictMode>,
-		document.getElementById(config.app.rootElement)
-	);
+		</React.StrictMode>
+	)
 }
 
-bootstrap().then(r => console.log('Application started successfully'));
+loadConfigBrowser().then((config: ReysinConfig) => {
+	return bootstrap(config);
+}).then(() => console.log('Application started successfully'))
+	.catch((error: any) => console.error('Failed to start application:', error));

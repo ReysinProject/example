@@ -4,7 +4,7 @@ app:
   rootElement: "root"
 
 vite:
-  port: 3000
+  port: 3005
   base: "/"
   outDir: "dist"
   assetsDir: "assets"

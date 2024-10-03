@@ -9,14 +9,14 @@
     "test": "reysin test"
   },
   "dependencies": {
-    "@reysin/project": "^1.0.11",
+    "@reysin/project": "^1.0.12",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@types/jest": "^29.5.13",
-    "@types/react": "^18.3.10",
+    "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
     "typescript": "^4.9.5"
   }

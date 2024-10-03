@@ -9,10 +9,12 @@
     "test": "reysin test"
   },
   "dependencies": {
-    "@reysin/project": "^1.0.12",
+    "@reysin/project": "^1.0.63",
+    "mobx": "^6.13.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.2"
+    "react-router-dom": "^6.26.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/jest": "^29.5.13",

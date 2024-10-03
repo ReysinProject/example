@@ -15,14 +15,14 @@ function Render() {
 	);
 }
 
-function Layout() {
+function Layout({children}: {children: React.ReactNode}) {
 	return (
     <div style={{
 			padding: 20,
       border: "1px solid black"
 		}}>
       <h1>Layout</h1>
-      <Render/>
+			{children}
     </div>
   );
 }

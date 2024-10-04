@@ -1,4 +1,4 @@
-import {injectable, singleton} from "@reysin/project";
+import { injectable, singleton } from "@reysin/project";
 import { TodoItem } from "../models/TodoItem";
 
 @singleton()
@@ -19,7 +19,7 @@ export class TodoService {
 	}
 
 	toggleTodo(id: number): void {
-		const todo = this.todos.find(t => t.id === id);
+		const todo = this.todos.find((t) => t.id === id);
 		if (todo) {
 			todo.completed = !todo.completed;
 		}

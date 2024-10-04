@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "reysin dev",
     "build": "reysin build",
-    "start": "reysin start",
-    "test": "reysin test"
+    "test": "pnpm biome check ./src && tsc --noEmit",
+    "fix": "pnpm biome check --fix ./src && tsc --noEmit"
   },
   "dependencies": {
     "@reysin/project": "^1.0.67",
@@ -17,6 +17,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.3",
     "@types/jest": "^29.5.13",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",

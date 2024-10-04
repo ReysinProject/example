@@ -1,7 +1,7 @@
 import { injectable } from "@reysin/project";
 import { makeAutoObservable } from "mobx";
-import { TodoService } from "../services/TodoService";
-import { TodoItem } from "../models/TodoItem";
+import type { TodoItem } from "../models/TodoItem";
+import type { TodoService } from "../services/TodoService";
 
 @injectable()
 export class TodoViewModel {

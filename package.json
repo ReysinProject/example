@@ -9,7 +9,7 @@
     "fix": "pnpm biome check --fix ./src && tsc --noEmit"
   },
   "dependencies": {
-    "@reysin/project": "^1.0.67",
+    "@reysin/project": "^1.0.68",
     "mobx": "^6.13.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

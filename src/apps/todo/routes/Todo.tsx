@@ -1,3 +1,4 @@
+import { Query } from "@reysin/project";
 import { defineRoute } from "@reysin/project/dist/core/defineRoute";
 import React, { type ReactNode } from "react";
 import { useNavigate } from "react-router-dom";

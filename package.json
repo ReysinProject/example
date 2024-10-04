@@ -9,7 +9,7 @@
     "test": "reysin test"
   },
   "dependencies": {
-    "@reysin/project": "^1.0.63",
+    "@reysin/project": "^1.0.67",
     "mobx": "^6.13.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

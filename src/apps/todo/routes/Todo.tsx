@@ -1,21 +1,52 @@
+import { defineRoute } from '@reysin/project/dist/core/defineRoute';
 import React from 'react';
-import {defineRoute} from "@reysin/project/dist/core/defineRoute";
+import {useNavigate} from "react-router-dom";
 
 function Render() {
+	const navigate = useNavigate()
+
+	const handleNav = () => {
+		navigate('/a')
+		console.log("navigate to /a")
+	}
 	return (
 		<div
 			style={{
 				padding: 20,
-        border: "1px solid black"
+				border: "1px solid black"
 			}}
 		>
-      <h2>Composant Page</h2>
-      <p>Bienvenue sur notre site web</p>
-    </div>
+			<h2>Composant Page</h2>
+			<button onClick={handleNav}>Go to /a</button>
+			<p>Bienvenue sur notre site web</p>
+		</div>
+	);
+}
+
+function RenderTwo() {
+	const navigate = useNavigate()
+
+	const handleNav = () => {
+		navigate('/')
+    console.log("navigate to /")
+	}
+
+	return (
+		<div
+			style={{
+				padding: 20,
+				border: "1px solid black"
+			}}
+		>
+			<h2>Composant Page</h2>
+			<button onClick={handleNav}>Go to /</button>
+			<p>Bienvenue sur notre site web</p>
+		</div>
 	);
 }
 
 function Layout({children}: {children: React.ReactNode}) {
+	console.log("refresh layout")
 	return (
     <div style={{
 			padding: 20,
@@ -37,3 +68,14 @@ function Layout({children}: {children: React.ReactNode}) {
 	layout: Layout
 })
 export class HomeRoute {}
+
+@defineRoute({
+	path: "/a",
+	meta: {
+		title: "test",
+		description: "Page d'accueil de notre application"
+	},
+	render: RenderTwo,
+	layout: Layout
+})
+export class TTRoute {}

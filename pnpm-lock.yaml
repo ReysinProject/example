@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@reysin/project':
-        specifier: ^1.0.63
-        version: 1.0.63(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.0.67
+        version: 1.0.67(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       mobx:
         specifier: ^6.13.3
         version: 6.13.3
@@ -212,8 +212,8 @@ packages:
     resolution: {integrity: sha512-baiMx18+IMuD1yyvOGaHM9QrVUPGGG0jC+z+IPHnRJWUAUvaKuWKyE8gjDj2rzv3sz9zOGoRSPgeBVHRhZnBlA==}
     engines: {node: '>=14.0.0'}
 
-  '@reysin/project@1.0.63':
-    resolution: {integrity: sha512-cWLKc5Dryl8mV7Sm/dyT/xkSN2GjeDGkrP6PpAIsW5Vx0GgpWnQQ3XaLiCvDGH6s5Jw0EPxzjni4UT882SNgvg==}
+  '@reysin/project@1.0.67':
+    resolution: {integrity: sha512-ZCdJDW/Jy+DpC3CLJp7Hkp9ZtJTGHu9YSv8A3+RGO+pzZ+WOlRnEwKy2cxwiM0z7CCS+sD8Rep5t6bKLvqtRLw==}
     hasBin: true
     peerDependencies:
       react: ^18.2.0
@@ -1371,7 +1371,7 @@ snapshots:
 
   '@remix-run/router@1.19.2': {}
 
-  '@reysin/project@1.0.63(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@reysin/project@1.0.67(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@types/js-yaml': 4.0.9
       '@types/node': 22.7.4
